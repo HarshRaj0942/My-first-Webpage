@@ -1,0 +1,31 @@
+body {
+    padding-top: 70px;
+}
+
+/* borrowed from inspect element in browser */
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+/* borrowed from inspect element in browser */
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+
+/* borrowed from inspect element in browser */
+
+.navbar-inverse {
+    background: #2c3e50;
+}
+
+.jumbotron {
+    background: #ecf0f1;
+}
+
+.row-full {
+
+    width: 100%;
+    position: relative;
+}

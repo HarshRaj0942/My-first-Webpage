@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="gallery.css" />
+    <title>Galleria</title>
+
+    <!-- add icon link -->
+    <link
+      rel="icon"
+      href="data:image/png;base64,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"
+      type="image/x-icon"
+    />
+
+    <style type="text/css">
+      .meow {
+        color: #2c3e50;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse  navbar-fixed-top">
+      <div class="container">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"
+              ><span
+                class="glyphicon glyphicon-modal-window"
+                aria-hidden="true"
+              ></span>
+              Imgs</a
+            >
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div
+            class="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Sign Up</a></li>
+              <li><a href="#">Log In</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron meow">
+        <h1>
+          <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+          The Image Gallery
+        </h1>
+        <p>My first image gallery</p>
+      </div>
+
+      <div class="row-full">
+        <div class="col-lg-3 col-md-4 ">
+          <div class="thumbnail">
+            <img
+              src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80"
+            />
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="thumbnail">
+            <!-- <img src = "https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"> -->
+            <img
+              src="https://images.unsplash.com/photo-1442570468985-f63ed5de9086?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="thumbnail">
+            <img
+              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80"
+            />
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="thumbnail">
+            <img
+              src="https://images.unsplash.com/photo-1549277634-ab2990526b2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- second row -->
+      <div class="row-full">
+        <div class="col-lg-3 col-md-4 ">
+          <div class="thumbnail">
+            <!-- <img src = "https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"> -->
+            <img
+              src="https://images.unsplash.com/photo-1559299734-bddc64da2e04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 ">
+          <div class="thumbnail">
+            <!-- <img src = "https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"> -->
+            <img
+              src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 ">
+          <div class="thumbnail">
+            <!-- <img src = "https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"> -->
+            <img
+              src="https://images.unsplash.com/photo-1530897598709-cb3dafe6af42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="thumbnail">
+            <img
+              src="https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
